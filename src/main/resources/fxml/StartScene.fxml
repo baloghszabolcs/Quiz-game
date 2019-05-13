@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bszab.quiz.controllers.StartController"
+            prefHeight="400.0" prefWidth="700.0">
+            <!--styleClass="Startcss" >-->
+    <stylesheets>
+        <URL value="@/styles/startStyle.css" />
+    </stylesheets>
+    <children>
+        <ImageView fx:id="image" fitHeight="300.0" fitWidth="460.0" layoutX="26.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/images/quizKep.png"/>
+            </image>
+        </ImageView>
+        <Button id="playBtn" fx:id="playButton" layoutX="456.0" layoutY="66.0" mnemonicParsing="false" onAction="#startGame" prefHeight="58.0" prefWidth="148.0" text="Play" textAlignment="CENTER">
+            <font>
+                <Font size="20.0" />
+            </font></Button>
+        <Label id="cim" fx:id="cim" layoutX="108.0" layoutY="13.0" prefHeight="35.0" prefWidth="348.0" text="A következő !" textAlignment="CENTER" />
+        <Button id="exitBtn" fx:id="exitFxId" layoutX="456.0" layoutY="163.0" mnemonicParsing="false" onAction="#endGame" prefHeight="58.0" prefWidth="148.0" text="Exit">
+            <font>
+                <Font size="20.0" />
+            </font></Button>
+        <AnchorPane layoutX="27.0" layoutY="52.0" />
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %boldBlue(%.-5level) %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="ALL">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</Configuration>

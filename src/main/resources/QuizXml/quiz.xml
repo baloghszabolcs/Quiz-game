@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quiz>
+    <question id="1"> Who Developed Java?
+        <answer attr="true"> James Gosling
+        </answer>
+        <answer attr="false">Charles Babbage
+        </answer>
+    </question>
+    <question  id="2">What was the original name of Java?
+        <answer attr="true"> Oak
+        </answer>
+        <answer attr="false"> Groovey
+        </answer>
+    </question>
+    <question id="3">What is the full form of JDK?
+        <answer attr="false">Java Developing Kit
+        </answer>
+        <answer attr="true"> Java Development Kit
+        </answer>
+    </question>
+    <question id="4">What is an class in Java?
+        <answer attr="true"> It is an representation of a set of objects
+        </answer>
+        <answer attr="false"> Datatype
+        </answer>
+    </question>
+    <question id="5">What is Abstraction in Java?
+        <answer attr="false"> Representation for the specific behaviour of an object
+        </answer>
+        <answer attr="true"> Act of Representing essential features only without any background details
+        </answer>
+    </question>
+    <question id="6">What is Encapsulation in Java?
+        <answer attr="true"> Wrapping up of data into a single unit
+        </answer>
+        <answer attr="false"> Use to declaire an Object
+        </answer>
+    </question>
+    <question id="7">What is an Method?
+        <answer attr="false"> The number and types of Arguments
+        </answer>
+        <answer attr="true"> A sequence of statements that carry out specific task(s)
+        </answer>
+    </question>
+    <question id="8">What is the other name of Method?
+        <answer attr="false">  Array
+        </answer>
+        <answer attr="true"> Function
+        </answer>
+    </question>
+    <question id="9"> What is an Object?
+        <answer attr="true">Identifiable entity with some Characteristics and Behaviour
+        </answer>
+        <answer attr="false">Blue print of an Program
+        </answer>
+    </question>
+    <question  id="10">What is an Object Factory?
+        <answer attr="false"> A producer of method
+        </answer>
+        <answer attr="true">A producer of class
+        </answer>
+    </question>
+    <question id="11">How are methods related to an object?
+        <answer attr="true">  The behaviour of an object is represented through associated methods
+        </answer>
+        <answer attr="false"> An object is created through an method
+        </answer>
+    </question>
+    <question id="12">How do you implement Object into software?
+        <answer attr="false">It wraps up the data and associated methods into a single unit called class
+        </answer>
+        <answer attr="true"> Characteristics / attributes through data members
+        </answer>
+    </question>
+    <question id="13">How do you implement Encapsulation into software?
+        <answer attr="true">The data and associated method is wrapped up into a single unit called instance of a class
+        </answer>
+        <answer attr="false">The data and associated method is wrapped up into a single unit called datatype
+        </answer>
+    </question>
+    <question id="14">What is an Byte Code?
+        <answer attr="false"> Java interpreter
+        </answer>
+        <answer attr="true">  It is a machine instruction for JVM
+        </answer>
+    </question>
+    <question id="15">What is an Source Code?
+        <answer attr="true"> The code written by a programmer
+        </answer>
+        <answer attr="false"> It is a machine instruction for your Operating System
+        </answer>
+    </question>
+    <question id="16">What is the full form of JVM?
+        <answer attr="false"> Java Visual Machine
+        </answer>
+        <answer attr="true"> Java Virtual Machine
+        </answer>
+    </question>
+    <question id="17"> What is JVM?
+        <answer attr="false">An Feature of BlueJ
+        </answer>
+        <answer attr="true">Java Interpreter
+        </answer>
+    </question>
+    <question  id="18">What is Native Executable Code?
+        <answer attr="true">Resultant Code of Ordinary Compilation
+        </answer>
+        <answer attr="false">Machine instruction to JVM
+        </answer>
+    </question>
+    <question id="19">What are Java APIs?
+        <answer attr="true"> Libraries of compiled code which can be used in Java Program
+        </answer>
+        <answer attr="false"> Java Platform to program Applications
+        </answer>
+    </question>
+    <question id="20">What is the full form of WORA?
+        <answer attr="true"> Write Once Run Anywhere
+        </answer>
+        <answer attr="false">Write Once Read After
+        </answer>
+    </question>
+    <question id="21">What is WORA in Java?
+        <answer attr="false"> It means Java Programs written once can be read anytime
+        </answer>
+        <answer attr="true"> It means Java Programs written once can be run on any platform without making any change to the code
+        </answer>
+    </question>
+    <question id="22">What is Platform Independence of Java?
+        <answer attr="false"> It means Java can be run only in its own platform
+        </answer>
+        <answer attr="true"> It means Java Programs can be use in any platform without making any changes to it
+        </answer>
+    </question>
+    <question id="23">What are the names of two types of Java Programs?
+        <answer attr="true">  Stand Alone Applications and Internet Appleats
+        </answer>
+        <answer attr="false"> JAR and JAD
+        </answer>
+    </question>
+    <question id="24">Which shortcut key(s) is use to save your Program in BlueJ?
+        <answer attr="false"> CTRL+SHIFT+I
+        </answer>
+        <answer attr="true"> CTRL+S
+        </answer>
+    </question>
+    <question id="25">Which shortcut key(s) is use to generate Documentation of an Program/Project in BlueJ?
+        <answer attr="true"> CTRL+J
+        </answer>
+        <answer attr="false">CTRL+W
+        </answer>
+    </question>
+    <question id="26">What is an JAR File?
+        <answer attr="false">  Mobile file
+        </answer>
+        <answer attr="true"> File which contains all the files of your project
+        </answer>
+    </question>
+    <question id="27">Which shortcut key is use to Compile the Code within the BlueJ Editor?
+        <answer attr="true"> CTRL+K
+        </answer>
+        <answer attr="false"> CTRL+C
+        </answer>
+    </question>
+    <question id="28">How would you describe Java language?
+        <answer attr="false">Programming Language
+        </answer>
+        <answer attr="true"> Programming Language and Platform
+        </answer>
+    </question>
+    <question id="29">Which statement is use to print any error in Java?
+        <answer attr="true">System.err.println(\"...\")
+        </answer>
+        <answer attr="false"> System.out.printline(\"...\")
+        </answer>
+    </question>
+    <question id="30">Which of these is use to express an single line comment in Java?
+        <answer attr="false">/**...*/
+        </answer>
+        <answer attr="true">  //...
+        </answer>
+    </question>
+    <question id="31">Which of these is use to express an multi line comment in Java?
+        <answer attr="true">  /*...*/
+        </answer>
+        <answer attr="false"> \**...*\
+        </answer>
+    </question>
+    <question id="32">Which of these is use to print your text in a new line?
+        <answer attr="false"> System.println(\"...\")
+        </answer>
+        <answer attr="true"> System.out.println(\"...\")
+        </answer>
+    </question>
+    <question id="33">What is an Token?
+        <answer attr="true">Reserved word
+        </answer>
+        <answer attr="false">An Keyword
+        </answer>
+    </question>
+    <question id="34">What are Keywords?
+        <answer attr="false">Reserved words
+        </answer>
+        <answer attr="true">Unreserved words
+        </answer>
+    </question>
+    <question id="35">Keywords are also known as?
+        <answer attr="true">Reserved words
+        </answer>
+        <answer attr="false">Editable words
+        </answer>
+    </question>
+    <question id="36">Which of these is an illegal Java Identifier?
+        <answer attr="false"> _CLASS
+        </answer>
+        <answer attr="true"> default
+        </answer>
+    </question>
+    <question id="37">What are Literals?
+        <answer attr="true"> Data items that are fixed data values
+        </answer>
+        <answer attr="false"> Changable data values
+        </answer>
+    </question>
+    <question id="38">In Java Hexadecimal Literals are written as?
+        <answer attr="false"> OX/(number)
+        </answer>
+        <answer attr="true"> OX(number)
+        </answer>
+    </question>
+    <question id="39">Which of these represents new line?
+        <answer attr="true"> \\n
+        </answer>
+        <answer attr="false"> \\t\n
+        </answer>
+    </question>
+    <question id="40">Which of these is an Real Literal in Java?
+        <answer attr="false"> Character Literal
+        </answer>
+        <answer attr="true"> Floating Literal
+        </answer>
+    </question>
+    <question id="41">Which of these represents null(0)?
+        <answer attr="true"> \\0
+        </answer>
+        <answer attr="false"> \\null
+        </answer>
+    </question>
+
+
+</quiz>

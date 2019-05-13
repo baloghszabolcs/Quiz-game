@@ -1,0 +1,59 @@
+
+.Endcss {
+
+}
+
+#exitButton{
+    -fx-background-color:#2F4F4F;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20px;
+    -fx-text-align: center;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    /*    -fx-padding: 14px  ;*/
+    -fx-border-width: 4px;
+
+
+}
+#exitButton:hover{
+    -fx-background-color: 	#B0C4DE;
+    -fx-border-width: 4px;
+    -fx-text-fill:#2F4F4F;
+    -fx-border-color:#2F4F4F;
+
+
+}
+
+#againButton{
+    -fx-background-color:#2F4F4F;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20px;
+    -fx-text-align: center;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-width: 4px;
+
+
+}
+
+#againButton:hover{
+    -fx-background-color: 	#B0C4DE;
+    -fx-border-width: 4px;
+    -fx-text-fill:#2F4F4F;
+    -fx-border-color:#2F4F4F;
+
+
+}
+
+#textScoreLabel{
+    -fx-font-size: 30px;
+    -fx-text-align: center;
+    -fx-font-weight: bold;
+}
+
+#scoreLabel{
+    -fx-font-size: 23px;
+    -fx-text-align: left;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000080;
+}

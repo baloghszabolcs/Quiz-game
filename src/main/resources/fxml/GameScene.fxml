@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/10.0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bszab.quiz.controllers.ViewController">
+    <stylesheets>
+        <URL value="@/styles/gameStyle.css" />
+    </stylesheets>
+    <children>
+      <Pane id="firstPane" fx:id="firstPane" prefHeight="400.0" prefWidth="688.0">
+        <children>
+            <RadioButton id="rb1" fx:id="rb1" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="586.0" textOverrun="CLIP" wrapText="true">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font></RadioButton>
+            <RadioButton id="rb2" fx:id="rb2" layoutX="25.0" layoutY="247.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="586.0" textOverrun="CLIP" wrapText="true">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font></RadioButton>
+            <Button id="button" fx:id="button" alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="30.0" onAction="#next" text="Next" textAlignment="CENTER">
+                <font>
+                    <Font size="26.0" />
+                </font>
+            </Button>
+
+            <Label id="questionLabel" fx:id="questionLabel" layoutX="40.0" layoutY="105.0" prefHeight="56.0" prefWidth="556.0" textOverrun="CLIP" wrapText="true" />
+            <ProgressBar id="Pb" fx:id="Pb" layoutX="25.0" layoutY="333.0" prefHeight="20.0" prefWidth="586.0" progress="0.0" />
+            <Button id="exitBtn" fx:id="exitBtn" layoutX="40.0" layoutY="30.0" mnemonicParsing="false" onAction="#exitGame" prefHeight="39.0" prefWidth="90.0" text="Exit" textAlignment="CENTER" textOverrun="CLIP">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Button>
+            <Label id="TimeLbl" fx:id="TimeLbl" layoutX="472.0" layoutY="33.0" prefHeight="49.0" prefWidth="110.0" text="Timer" textAlignment="CENTER">
+                <font>
+                    <Font size="31.0" />
+                </font>
+            </Label>
+        </children>
+      </Pane>
+      <Pane id="secondPane" fx:id="secondPane" layoutX="163.0" layoutY="107.0" prefHeight="186.0" prefWidth="327.0" visible="false">
+         <children>
+            <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#b6dcff" height="164.0" layoutX="38.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
+            <Label id="alertText" fx:id="alertText" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="44.0" prefHeight="49.0" prefWidth="238.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button id="returnBtn" fx:id="returnBtn" layoutX="119.0" layoutY="118.0" mnemonicParsing="false" onAction="#returnToGame" prefHeight="39.0" prefWidth="90.0" text="Return">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+
+</AnchorPane>

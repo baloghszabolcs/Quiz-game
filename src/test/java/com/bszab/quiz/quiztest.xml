@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<quiz>
+    <question id="1"> egyeskerdes
+        <answer attr="true">Its a compiled language based off of Basic.
+        </answer>
+        <answer attr="false">Its an interpreted web development language based off of perl, lisp and smalltalk.
+        </answer>
+    </question>
+    <question id="8">nyolcas
+        <answer attr="false"> igen
+        </answer>
+        <answer attr="true"> nem
+        </answer>
+    </question>
+</quiz>

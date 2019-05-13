@@ -1,0 +1,52 @@
+
+.Startcss {
+
+
+
+
+}
+
+#cim{
+    -fx-font-size: 45px;
+}
+
+#playBtn{
+    -fx-background-color:#2F4F4F;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20px;
+    -fx-text-align: center;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-width: 4px;
+
+
+
+}
+
+
+#playBtn:hover{
+    -fx-background-color: 	#B0C4DE;
+    -fx-border-width: 4px;
+    -fx-text-fill:#2F4F4F;
+    -fx-border-color:#2F4F4F;
+
+}
+
+#exitBtn{
+    -fx-background-color:#2F4F4F;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20px;
+    -fx-text-align: center;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-width: 4px;
+
+}
+
+#exitBtn:hover{
+    -fx-background-color:#B0C4DE;
+    -fx-border-width: 4px;
+    -fx-text-fill:#2F4F4F;
+    -fx-border-color:#2F4F4F;
+
+}
