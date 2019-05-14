@@ -26,7 +26,7 @@ public class ViewController implements Initializable  {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ido();
+        ido(false,true);
         randomArrayGenerator();
         questionIterator= randomSzamok.get(randomNumberIterator);
         rbGroup = new ToggleGroup();
@@ -67,7 +67,7 @@ public class ViewController implements Initializable  {
     private  int questionIterator=0;
     private int randomNumberIterator=0;
     private int correctIndex= theTest.getQuestions().get(questionIterator).getCorrectAnswer();
-    private final int randomNumbersSize = 3;
+    public int randomNumbersSize = 6;
     private final double progress = 1.0/randomNumbersSize;
     private double progressDinamic = progress;
     private boolean ok=false;
@@ -83,8 +83,8 @@ public class ViewController implements Initializable  {
         }
     }
 
-    private ArrayList<Integer> randomSzamok = new ArrayList<>(randomNumbersSize);
-    private void randomArrayGenerator(){
+    public ArrayList<Integer> randomSzamok = new ArrayList<>(randomNumbersSize);
+    public void randomArrayGenerator(){
         Random randomgen = new Random();
         while (randomSzamok.size() < randomNumbersSize) {
             int rand = randomgen.nextInt(41);
@@ -93,41 +93,46 @@ public class ViewController implements Initializable  {
             }
         }
     }
-    private int TIME_SEC = 6000; //in seconds
-    private void ido(){
+    private int TIME_SEC = 2000; //in seconds
 
-        Task<Void> task = new Task<Void>() {
-            @Override
-            protected Void call() throws Exception {
-                final SimpleDateFormat simpDate;
-                simpDate = new SimpleDateFormat("mm:ss");
-                for ( ; TIME_SEC>=-1; TIME_SEC--) {
-                    Platform.runLater(new Runnable() {
-                        @Override public void run() {
-                            TimeLbl.setText(""+simpDate.format(TIME_SEC*1000));
+    Task<Void> task = new Task<Void>() {
+        @Override
+        protected Void call() throws Exception {
+            final SimpleDateFormat simpDate;
+            simpDate = new SimpleDateFormat("mm:ss");
+            for ( ; TIME_SEC>=-1; TIME_SEC--) {
+                Platform.runLater(new Runnable() {
+                    @Override public void run() {
+                        TimeLbl.setText(""+simpDate.format(TIME_SEC*1000));
 
-                            if (TIME_SEC == -1){
-                                logger.info("Time is up !");
-                                exit();
-                                cancel(true);
-                            }
+                        if (TIME_SEC == -1){
+                            logger.info("Time is up !");
+                            exit();
+                            cancel(true);
                         }
-                    });
-                    Thread.sleep(1000);
-                }
-                return null;
+                    }
+                });
+                Thread.sleep(1000);
             }
+            return null;
+        }
 
-        };
-        Thread t1 = new Thread(task);
-        t1.setDaemon(true);
-        t1.start();
-        logger.info("The time is started! ");
+    };
+    Thread t1 = new Thread(task);
+    private void ido(boolean resumeTime ,boolean firstStart){
+        if (firstStart == true && resumeTime == false){
+            logger.info("The time is starting !");
+            t1.setDaemon(true);
+            t1.start();
+        }
+        if (resumeTime == true && firstStart == false){
+            logger.info("Resuming time !");
+            t1.resume();
+        } else  if (resumeTime == false && firstStart == false){
+            logger.info("The time was stopped !");
+            t1.suspend();
+        }
     }
-
-
-
-
 
 
     public static void setScore(int score) {
@@ -141,38 +146,43 @@ public class ViewController implements Initializable  {
         ViewController.score++;
     }
 
-
-
     @FXML
     private void next(ActionEvent event) {
         logger.info("Next button pressed");
-        ok = true;
         if (rb1.isSelected() == false && rb2.isSelected() == false){
+            logger.warn("No answer selected");
+            ido(false,false);
             firstPane.setDisable(true);
             firstPane.setOpacity(0.3);
             secondPane.setVisible(true);
             alertText.setText("You must select at least one answer!");
-            logger.warn("No answer selected");
             ok = false;
         }
 
         else if (rb1.isSelected() && (correctIndex == 1)) {
-            if (randomNumberIterator >= getScore()) {   // idk mi akar ez lenni
+            if (randomNumberIterator >= getScore()) {
                 scorePlus();
             }
+            logger.info("Correct answer !");
+            nextQuestion();
         } else if (rb2.isSelected() && (correctIndex == 2)) {
             if (randomNumberIterator >= getScore()) {
                 scorePlus();
             }
-        } else {
+            logger.info("Correct answer !");
+            nextQuestion();
+        }
+        else {
             ok = false;
             rb1.setSelected(false);
             rb2.setSelected(false);
-        }
+            logger.info("Wrong answer !");
+            ido(false,false);
+            firstPane.setDisable(true);
+            firstPane.setOpacity(0.3);
+            secondPane.setVisible(true);
+            alertText.setText("Wrong answer! the quiz will restart!");
 
-
-
-        if (ok == false) {
             randomNumberIterator = 0;
             questionIterator = randomSzamok.get(randomNumberIterator);
             progressDinamic = progress * randomNumberIterator;
@@ -180,29 +190,15 @@ public class ViewController implements Initializable  {
             Question();
             Answer();
         }
-        else if (randomNumberIterator + 1 == randomNumbersSize) {
-            logger.info("Game over !");
-            exit();
-        }
-        else {
-            randomNumberIterator++;
-            progressDinamic = progress * randomNumberIterator;
-            Pb.setProgress(progressDinamic);
-            questionIterator = randomSzamok.get(randomNumberIterator);
-            Question();
-            Answer();
-            if (rb1.isSelected()) {
-                rb1.setSelected(false);
-            } else if (rb2.isSelected()) {
-                rb2.setSelected(false);
-            }
 
-        }
+
+
     }
 
     @FXML
     private void returnToGame(ActionEvent event){
         logger.info("Resume game");
+        ido(true,false);
         firstPane.setDisable(false);
         firstPane.setOpacity(1);
         secondPane.setVisible(false);
@@ -227,6 +223,25 @@ public class ViewController implements Initializable  {
         }
     }
 
+    private void nextQuestion() {
+        if (randomNumberIterator +1 == randomNumbersSize) {
+            logger.info("Game over !");
+            exit();
+        } else {
+            logger.info("Next question !");
+            randomNumberIterator++;
+            progressDinamic = progress * randomNumberIterator;
+            Pb.setProgress(progressDinamic);
+            questionIterator = randomSzamok.get(randomNumberIterator);
+            Question();
+            Answer();
+            if (rb1.isSelected()) {
+                rb1.setSelected(false);
+            } else if (rb2.isSelected()) {
+                rb2.setSelected(false);
+            }}
+    }
+
     private  void exit(){
         logger.info("Finishing the game");
         try {
@@ -248,14 +263,14 @@ public class ViewController implements Initializable  {
     //CHECKSTYLE:ON
 
     /**
-     *
+     * Display the question on the screen.
      */
     private void Question(){
         questionLabel.setText(theTest.getQuestions().get(questionIterator).getQuestionText());
     }
 
     /**
-     *
+     * Display the answers on the screen.
      */
     private void Answer() {
         rb1.setText(theTest.getQuestions().get(questionIterator).getAnswer1Text());

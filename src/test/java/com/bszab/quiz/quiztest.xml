@@ -8,8 +8,7 @@ and open the template in the editor.
 
 <quiz>
     <question id="1"> egyeskerdes
-        <answer attr="true">Its a compiled language based off of Basic.
-        </answer>
+        <answer attr="true">Its a compiled language based off of Basic.</answer>
         <answer attr="false">Its an interpreted web development language based off of perl, lisp and smalltalk.
         </answer>
     </question>

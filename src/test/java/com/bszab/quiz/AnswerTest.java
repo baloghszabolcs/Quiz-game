@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class AnswerTest {
-   private static ParserXml parser = new ParserXml("src/test/java/com/bszab/quiz/quiztest.xml");
+    private static ParserXml parser = new ParserXml("src/test/java/com/bszab/quiz/quiztest.xml");
 
     public AnswerTest(){}
 
@@ -57,6 +57,14 @@ public class AnswerTest {
         boolean result = (parser.isQuestionAnswerCorrect(1, 1) != parser.isQuestionAnswerCorrect(2, 1));
         assertEquals(expResult,result);
 
+
+    }
+
+    @Test
+    public void getQuestionAnswerTextTest(){
+        String expResult = "Its a compiled language based off of Basic.";
+        String result = parser.getQuestionAnswerText(1,1);
+        assertEquals(expResult,result);
 
     }
 

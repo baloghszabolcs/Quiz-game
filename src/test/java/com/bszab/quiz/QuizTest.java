@@ -39,8 +39,15 @@ public class QuizTest {
         quiz.scorePlus();
         expected = 21;
         assertEquals(expected, quiz.getScore());
+    }
 
-
+    @Test
+    public void randomArrayTest(){
+        quiz.randomNumbersSize=10;
+        quiz.randomArrayGenerator();
+        int expected = 10;
+        int result = quiz.randomSzamok.size();
+        assertEquals(expected,result);
     }
 
 }
