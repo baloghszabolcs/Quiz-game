@@ -57,9 +57,9 @@
 
 
     <scm>
-        <connection>scm:git:https://github.com/baloghszabolcs/Beadando.git</connection>
-        <developerConnection>scm:git:https://github.com/baloghszabolcs/Beadando.git</developerConnection>
-        <url>https://github.com/baloghszabolcs/Beadando</url>
+        <connection>scm:git:https://github.com/baloghszabolcs/Quiz-game.git</connection>
+        <developerConnection>scm:git:https://github.com/baloghszabolcs/Quiz-game.git</developerConnection>
+        <url>https://github.com/baloghszabolcs/Quiz-game.git</url>
         <tag>master</tag>
     </scm>
     <properties>
